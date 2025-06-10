@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tab Icon -->
-  <link rel="icon" type="image/png" sizes="32x32" href=SaflecSystemsLogo.png>
-  <link rel="icon" type="image/png" sizes="16x16" href=SaflecSystemsLogo.png>
+  <link rel="icon" type="image/png" sizes="32x32" href="C:\Hanu\Saflec Systems\Images\SDC Logo Only.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="C:\Hanu\Saflec Systems\Images\SDC Logo Only.png">
 
   <!-- Tailwind Config -->
   <script>
@@ -113,7 +113,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="#home">
-        <img src="New Saflec Systems Logo 21.png" alt="Saflec Systems Logo" class="h-16 w-auto" />
+        <img src="C:\Hanu\Saflec Systems\Images\Saflec Systems Logo V3.png" alt="Saflec Systems Logo" class="h-16 w-auto" />
       </a>
 
     <!-- Desktop Nav -->
@@ -173,7 +173,7 @@
 
       <!-- Animated PNG -->
       <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="SaflecSystemsLogo.png" alt="Animated Visual" class="h-64 w-auto animate-floating" />
+        <img src="C:\Hanu\Saflec Systems\Images\Logo (Big enough for facebook circle to not trim it).png" alt="Animated Visual" class="h-64 w-auto animate-floating" />
       </div>
     </div>
   </section>  
@@ -252,7 +252,6 @@
     <p class="text-black text-sm font-bold">We stay ahead by developing new technologies that anticipate tomorrow’s security needs.</p>
   </div>
 </div>
-
 </section>
 
 <!-- Include AOS initialization script somewhere in your project -->
@@ -264,6 +263,21 @@
     once: true,
   });
 </script>
+
+<!-- Partners Section -->
+<section id="partners" class="py-10 bg-white text-black" style="scroll-margin-top: 80px;">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Our Partners</h2>
+    <p class="mb-6 text-sm font-bold max-w-2xl mx-auto">
+      We work alongside industry-leading partners who help us deliver integrated, world-class security solutions. Our strategic collaborations 
+      ensure that we remain at the forefront of innovation and service excellence.
+    </p>
+    <a href="/partners" class="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white font-semibold text-sm px-5 py-3 rounded-full shadow-lg transform transition hover:scale-105 hover:from-blue-600 hover:via-blue-700 hover:to-blue-900">
+      Meet Our Partners
+    </a>
+  </div>
+</section>
+
 
 <!-- Our Products -->
 <section id="products" class="py-10 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100 text-black" style="scroll-margin-top: 80px;">
@@ -463,7 +477,7 @@
       
       <!-- SACS Brochure Card -->
       <div class="bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center text-center">
-        <img src="SACS Brochure 2025 Cover Page.png" alt="SACS Brochure" class="w-40 h-56 object-cover rounded mb-4 shadow-md">
+        <img src="H:\Saflec Systems\Saflec Access Control System\Brochure\SACS Brochure 2025 Cover Page.png" alt="SACS Brochure" class="w-40 h-56 object-cover rounded mb-4 shadow-md">
         <h3 class="text-xl font-semibold text-gray-800 mb-2">SACS Brochure</h3>
         <p class="text-sm text-gray-600 mb-4">An introduction to our key products and solutions.</p>
         <div class="flex gap-3">
@@ -493,7 +507,6 @@
           <a href="H:\Saflec Systems\Saflec Access Control System\Brochure\SACS Integration Options.pdf" download class="text-sm font-medium text-blue-600 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Download</a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -822,64 +835,48 @@
 <!-- Script to toggle Postal Address and Reference Fields -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Postal Address toggle logic
+    // Postal Address toggle
     const postalYes = document.querySelector('input[name="postalSameAsDelivery"][value="yes"]');
     const postalNo = document.querySelector('input[name="postalSameAsDelivery"][value="no"]');
     const postalField = document.getElementById('postalAddressField');
-    const postalAddressInput = document.getElementById('postalAddress');
 
     function togglePostalField() {
       if (postalNo.checked) {
         postalField.classList.remove('hidden');
-        postalAddressInput.setAttribute('required', 'required');
       } else {
         postalField.classList.add('hidden');
-        postalAddressInput.removeAttribute('required');
       }
     }
 
     postalYes.addEventListener('change', togglePostalField);
     postalNo.addEventListener('change', togglePostalField);
-    togglePostalField(); // initial check
+    togglePostalField(); // Initialize on page load
 
-    // Reference Fields toggle logic based on Application Type
-    const appTypeSelect = document.getElementById('applicationType');
+    // Reference Fields + Credit Modal toggle
+    const applicationType = document.getElementById('applicationType');
     const referenceFields = document.getElementById('referenceFields');
-    const referenceInputs = referenceFields.querySelectorAll('input');
+    const creditModal = document.getElementById('creditModal');
 
-    function toggleReferenceFields() {
-      const val = appTypeSelect.value.toLowerCase();
-      if (val === 'credit' || val === 'both') {
+    function toggleReferenceAndModal() {
+      const value = applicationType.value;
+      
+      if (value === 'credit' || value === 'both') {
         referenceFields.classList.remove('hidden');
-        // Make reference inputs required
-        referenceInputs.forEach(input => input.setAttribute('required', 'required'));
+        creditModal.classList.remove('hidden');
       } else {
         referenceFields.classList.add('hidden');
-        // Remove required from reference inputs
-        referenceInputs.forEach(input => input.removeAttribute('required'));
-        // Also clear values so no leftover data
-        referenceInputs.forEach(input => input.value = '');
+        creditModal.classList.add('hidden');
       }
     }
 
-    appTypeSelect.addEventListener('change', toggleReferenceFields);
-    toggleReferenceFields(); // initial check
+    applicationType.addEventListener('change', toggleReferenceAndModal);
+    toggleReferenceAndModal(); // Initialize on page load if needed
+
+    // Close modal
+    window.closeCreditModal = function () {
+      creditModal.classList.add('hidden');
+    };
   });
-    const appTypeSelect = document.getElementById("applicationType"); // change this ID based on your form
-  const creditModal = document.getElementById("creditModal");
-
-  if (appTypeSelect) {
-    appTypeSelect.addEventListener("change", function () {
-      const selectedValue = appTypeSelect.value.toLowerCase();
-      if (selectedValue === "credit" || selectedValue === "both") {
-        creditModal.classList.remove("hidden");
-      }
-    });
-  }
-
-  function closeCreditModal() {
-    creditModal.classList.add("hidden");
-  }
 </script>
 
 		<!-- News -->
@@ -974,7 +971,7 @@
 
   <!-- Blog Posts Grid -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    <!-- Blog Post 1 -->
+    <!-- Blog Post 4 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">16 June, 2025</span>
@@ -995,7 +992,7 @@
   </a>
 </div>
 
-    <!-- Blog Post 2 -->
+    <!-- Blog Post 5 -->
 	<div class="bg-gray-50 p-4 rounded shadow relative">
 		<div class="flex items-center mb-2">
             <span class="text-xs text-black-500">15 June, 2025</span>
@@ -1016,7 +1013,7 @@
 		</a>
 		</div>
 
-    <!-- Blog Post 3 -->
+    <!-- Blog Post 6 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">11 June, 2025</span>
@@ -1037,7 +1034,7 @@
   </a>
 </div>
 
-    <!-- Blog Post 4 -->
+    <!-- Blog Post 7 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">6 June, 2025</span>
@@ -1057,7 +1054,7 @@
   </a>
 </div>
 
-    <!-- Blog Post 5 -->
+    <!-- Blog Post 8 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">2 June, 2025</span>
@@ -1078,7 +1075,7 @@
   </a>
 </div>
 
-    <!-- Blog Post 6 -->
+    <!-- Blog Post 9 -->
 	<div class="bg-gray-50 p-4 rounded shadow relative">
 		<div class="flex items-center mb-2">
             <span class="text-xs text-black-500">28 May, 2025</span>
@@ -1099,7 +1096,7 @@
 		</a>
 		</div>
 
-    <!-- Blog Post 7 -->
+    <!-- Blog Post 10 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">26 May, 2025</span>
@@ -1120,7 +1117,7 @@
   </a>
 </div>
 
-    <!-- Blog Post 8 -->
+    <!-- Blog Post 11 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">23 May, 2025</span>
@@ -1141,7 +1138,7 @@
   </a>
 </div>
 
-<!-- Blog Post 9 -->
+<!-- Blog Post 12 -->
 <div class="bg-gray-50 p-4 rounded shadow relative">
         <div class="flex items-center mb-2">
             <span class="text-xs text-black-500">21 May, 2025</span>
