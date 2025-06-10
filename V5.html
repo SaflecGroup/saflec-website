@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tab Icon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="SaflecSystemsLogo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="SaflecSystemsLogo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="C:\Hanu\Saflec Systems\Images\SDC Logo Only.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="C:\Hanu\Saflec Systems\Images\SDC Logo Only.png">
 
   <!-- Tailwind Config -->
   <script>
@@ -113,7 +113,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="#home">
-        <img src="New Saflec Systems Logo 21.png" alt="Saflec Systems Logo" class="h-16 w-auto" />
+        <img src="C:\Hanu\Saflec Systems\Images\Saflec Systems Logo V3.png" alt="Saflec Systems Logo" class="h-16 w-auto" />
       </a>
 
     <!-- Desktop Nav -->
@@ -173,7 +173,7 @@
 
       <!-- Animated PNG -->
       <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-        <img src="SaflecSystemsLogo.png" alt="Animated Visual" class="h-64 w-auto animate-floating" />
+        <img src="C:\Hanu\Saflec Systems\Images\Logo (Big enough for facebook circle to not trim it).png" alt="Animated Visual" class="h-64 w-auto animate-floating" />
       </div>
     </div>
   </section>  
@@ -476,12 +476,12 @@
     <div class="flex justify-center">
       <!-- SACS Brochure Card -->
       <div class="bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center text-center w-full max-w-xs">
-        <img src="SACS Brochure 2025 Cover Page.png" alt="SACS Brochure" class="w-40 h-56 object-cover rounded mb-4 shadow-md">
+        <img src="H:\Saflec Systems\Saflec Access Control System\Brochure\SACS Brochure 2025 Cover Page.png" alt="SACS Brochure" class="w-40 h-56 object-cover rounded mb-4 shadow-md">
         <h3 class="text-xl font-semibold text-gray-800 mb-2">SACS Brochure</h3>
         <p class="text-sm text-gray-600 mb-4">An introduction to our key products and solutions.</p>
         <div class="flex gap-3">
-          <a href="SACS Brochure Inside & Outside.pdf" target="_blank" class="text-sm font-medium text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
-          <a href="SACS Brochure Inside & Outside.pdf" download class="text-sm font-medium text-blue-600 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Download</a>
+          <a href="H:\Saflec Systems\Saflec Access Control System\Brochure\SACS Brochure 2025.pdf" target="_blank" class="text-sm font-medium text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition">View</a>
+          <a href="H:\Saflec Systems\Saflec Access Control System\Brochure\SACS Brochure 2025.pdf" download class="text-sm font-medium text-blue-600 border border-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Download</a>
         </div>
       </div>
     </div>
@@ -1531,76 +1531,81 @@
 			<div class="lg:flex lg:space-x-8">
 		<!-- LEFT: Contact Form -->
 			<div class="lg:w-1/2">
-				<form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); sendEmailViaMailto();">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<!-- Name -->
-					<div>
-					<label for="name" class="block text-gray-700 font-medium mb-2">Name & Surname</label>
-					<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
-					</div>
-					<!-- User Email -->
-					<div>
-					<label for="userEmail" class="block text-gray-700 font-medium mb-2">Your Email Address</label>
-					<input type="email" id="userEmail" name="userEmail" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
-					</div>
-					<!-- Phone -->
-					<div>
-					<label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-					<input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-					</div>
-            		<!-- Client Type -->
-					<div>
-					<label for="subject" class="block text-gray-700 font-medium mb-2">Client Type</label>
-					<select
- id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-						<option value="blank"></option>
-						<option value="end">End User</option>
-						<option value="installer">Installer</option>
-						<option value="Other">Other</option>
-					</select>
-					</div>
-					<!-- Send To -->
-					<div>
-					<label for="emailSelect" class="block text-gray-700 font-medium mb-2">Send To</label>
-					<select id="emailSelect" name="emailSelect" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
-						<option value="blank"></option>
-						<option value="info@saflecsystems.co.za">Info</option>
-						<option value="hanu@saflecsystems.co.za">Marketing</option>
-						<option value="support@saflecsystems.co.za">Support</option>
-						<option value="sales@saflecsystems.co.za">Sales</option>
-					</select>
-					</div>
-					<!-- Subject -->
-					<div>
-					<label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-					<select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
-						<option value="blank"></option>
-						<option value="General Info">General Info</option>
-						<option value="Marketing">Marketing</option>
-						<option value="Training">Need Saflec Systems Training</option>
-						<option value="Other">Other</option>
-						<option value="Quote">Request A Quote</option>
-						<option value="Support">Support</option>
-					</select>
-					</div>
+<form id="contact-form" class="space-y-6" action="https://formspree.io/f/xeokanww" method="POST">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-gray-700 font-medium mb-2">Name & Surname</label>
+      <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+    </div>
+    
+    <!-- Email -->
+    <div>
+      <label for="userEmail" class="block text-gray-700 font-medium mb-2">Your Email Address</label>
+      <input type="email" id="userEmail" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+    </div>
+    
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+      <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+    </div>
 
-					<!-- Message -->
-					<div class="md:col-span-2">
-					<label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-					<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
-					</div>
-					<!-- Submit Button -->
-					<div class="md:col-span-2 flex justify-center">
-						<button type="submit" class="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white font-semibold px-6 py-3 rounded-full shadow-lg transform transition hover:scale-105 hover:from-blue-600 hover:via-blue-700 hover:to-blue-900">
-						Send Message
-						</button>
-					</div>
-				</div>
-				</form>
+    <!-- Client Type -->
+    <div>
+      <label for="clientType" class="block text-gray-700 font-medium mb-2">Client Type</label>
+      <select id="clientType" name="clientType" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+        <option value="blank"></option>
+        <option value="end">End User</option>
+        <option value="installer">Installer</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
 
-				<div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-md">
-				Thank you for your message! We'll get back to you shortly.
-				</div>
+    <!-- Send To -->
+    <div>
+      <label for="emailSelect" class="block text-gray-700 font-medium mb-2">Send To</label>
+      <select id="emailSelect" name="recipient" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+        <option value=""></option>
+        <option value="info@saflecsystems.co.za">Info</option>
+        <option value="hanu@saflecsystems.co.za">Marketing</option>
+        <option value="support@saflecsystems.co.za">Support</option>
+        <option value="sales@saflecsystems.co.za">Sales</option>
+      </select>
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+      <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+        <option value="blank"></option>
+        <option value="General Info">General Info</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Training">Need Saflec Systems Training</option>
+        <option value="Other">Other</option>
+        <option value="Quote">Request A Quote</option>
+        <option value="Support">Support</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div class="md:col-span-2">
+      <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+      <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="md:col-span-2 flex justify-center">
+      <button type="submit" class="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white font-semibold px-6 py-3 rounded-full shadow-lg transform transition hover:scale-105 hover:from-blue-600 hover:via-blue-700 hover:to-blue-900">
+        Send Message
+      </button>
+    </div>
+  </div>
+</form>
+
+<div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-md">
+  Thank you for your message! We'll get back to you shortly.
+</div>
 			</div>
 	  
 		<!-- RIGHT: Get in Touch Info -->
