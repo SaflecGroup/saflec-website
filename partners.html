@@ -1,67 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Partners</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saflec Systems Partners</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-white shadow p-6 mb-8">
-    <h1 class="text-3xl font-bold text-center">Our Technology Partners</h1>
-  </header>
 
-  <main class="max-w-7xl mx-auto px-4">
-    <!-- Section Template -->
-    <script id="section-template" type="text/template">
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">{{CATEGORY}}</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {{CARDS}}
-        </div>
-      </section>
-    </script>
-
-    <!-- Card Template -->
-    <script id="card-template" type="text/template">
-      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
-        <div class="h-40 bg-gray-200 rounded mb-4 flex items-center justify-center">
-          <span class="text-gray-500">Image</span>
-        </div>
-        <h3 class="text-lg font-bold mb-2">Product Name</h3>
-        <p class="text-sm text-gray-600">Short description of the product.</p>
+<body class="bg-white text-black">
+  <!-- Hero Section -->
+  <section id="home" class="relative pt-5 pb-5 px-6 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100 text-black scroll-mt-32">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+      <!-- Text Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Saflec Systems Partners
+        </h1>
+        <p class="text-lg md:text-xl mb-6">
+          Saflec Systems partners with leading providers to offer versatile, cost-effective security and identification solutions. Using our integrated SACS software, we connect seamlessly with biometric and specialized products to deliver tailored, comprehensive solutions. See our partners below.
+        </p>
       </div>
-    </script>
+	  <!-- Animated PNG -->
+      <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        <img src="SaflecSystemsLogo.png" alt="Animated Visual" class="h-64 w-auto animate-floating" />
+      </div>
+    </div>
+  </section>  
 
-    <div id="content"></div>
-  </main>
+  <!-- Partners Section -->
+  <section class="container mx-auto px-4 py-10 bg-white">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center">
+      <img src="partner1.png" alt="Partner 1 Logo" class="h-20 mx-auto">
+      <img src="partner2.png" alt="Partner 2 Logo" class="h-20 mx-auto">
+      <img src="partner3.png" alt="Partner 3 Logo" class="h-20 mx-auto">
+      <img src="partner4.png" alt="Partner 4 Logo" class="h-20 mx-auto">
+      <img src="partner5.png" alt="Partner 5 Logo" class="h-20 mx-auto">
+      <img src="partner6.png" alt="Partner 6 Logo" class="h-20 mx-auto">
+      <img src="partner7.png" alt="Partner 7 Logo" class="h-20 mx-auto">
+    </div>
+  </section>
 
+  <!-- Mobile Menu Script -->
   <script>
-    const categories = [
-      "Biometrics",
-      "CCTV",
-      "Automation",
-      "Printers",
-      "Display Systems",
-      "Point of Sale",
-      "HR Management Solutions"
-    ];
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    const sectionTemplate = document.getElementById('section-template').innerHTML;
-    const cardTemplate = document.getElementById('card-template').innerHTML;
-
-    const content = document.getElementById('content');
-
-    categories.forEach(category => {
-      let cardsHTML = "";
-      for (let i = 0; i < 6; i++) {
-        cardsHTML += cardTemplate;
-      }
-      const sectionHTML = sectionTemplate
-        .replace("{{CATEGORY}}", category)
-        .replace("{{CARDS}}", cardsHTML);
-      content.innerHTML += sectionHTML;
+    menuButton?.addEventListener('click', () => {
+      const isVisible = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', isVisible);
     });
   </script>
+
+  <!-- Biometrics Section -->
+  <section id="partner1" class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">Biometrics Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CCTV Section -->
+  <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">CCTV Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Automation Section -->
+  <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">Automation Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Printers Section -->
+  <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">Printer Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Display Systems Section -->
+  <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">Display Systems Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POS Section -->
+<section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-black mb-6">Point of Sale Partners</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- HR Management Solutions Section -->
+  <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-black mb-6">HR Management Solutions Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?cloud,technology" alt="Hybrid Cloud" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Hybrid Cloud</h3>
+        <p>Seamless integration between on-prem and cloud systems for hybrid infrastructure.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?network,security" alt="Network Security" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">Network Security</h3>
+        <p>Zero-trust frameworks and secure access solutions for modern enterprises.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
+        <img src="https://source.unsplash.com/400x200/?devops,automation" alt="DevOps Automation" class="rounded-xl mb-4 object-cover w-full h-40" />
+        <h3 class="text-xl font-semibold text-black mb-2">DevOps Automation</h3>
+        <p>CI/CD pipelines and infrastructure as code for agile application delivery.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100 text-black text-center py-4 font-[itc-eras]">
+    <p>&copy; 2025 Saflec Systems. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
