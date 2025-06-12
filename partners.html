@@ -9,32 +9,62 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-black">
+<body class="font-sans bg-white text-black">
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="h-1 w-full bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100"></div>
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home">
+        <img src="New Saflec Systems Logo 21.png" alt="Saflec Systems Logo" class="h-16 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link text-black font-medium">Biometrics</a>
+        <a href="#products" class="nav-link text-black font-medium">CCTV</a>
+        <a href="#brochure" class="nav-link text-black font-medium">Automation </a>
+        <a href="#application" class="nav-link text-black font-medium">Printers</a>
+        <a href="#news" class="nav-link text-black font-medium">Display Systems</a>
+        <a href="#team" class="nav-link text-black font-medium">Point of Sale</a>
+        <a href="#feedback" class="nav-link text-black font-medium">HR Management Solutions</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="h-1 w-full bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100"></div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-4 py-4 space-y-2">
+        <a href="#about" class="nav-link text-black font-medium">Biometrics</a>
+        <a href="#products" class="nav-link text-black font-medium">CCTV</a>
+        <a href="#brochure" class="nav-link text-black font-medium">Automation </a>
+        <a href="#application" class="nav-link text-black font-medium">Printers</a>
+        <a href="#news" class="nav-link text-black font-medium">Display Systems</a>
+        <a href="#team" class="nav-link text-black font-medium">Point of Sale</a>
+        <a href="#feedback" class="nav-link text-black font-medium">HR Management Solutions</a>
+    </div>
+  </header>
+
   <!-- Hero Section -->
-  <section id="home" class="relative pt-5 pb-5 px-6 bg-white text-black scroll-mt-32">
+  <section id="home" class="pt-32 pb-10 px-6 bg-white text-black">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
       <!-- Text Content -->
       <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-7xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Saflec Systems Partners
         </h1>
         <p class="text-lg md:text-xl mb-6">
           Saflec Systems delivers world-class access control and time management solutions, designed to protect people, property, and productivity.
         </p>
       </div>
-	</section>
-
-  <!-- Mobile Menu Script -->
-  <script>
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuButton?.addEventListener('click', () => {
-      const isVisible = mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden');
-      menuButton.setAttribute('aria-expanded', isVisible);
-    });
-  </script>
+    </div>
+  </section>
 
   <!-- Biometrics Section -->
   <section id="partner1" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
@@ -138,7 +168,7 @@
   <!-- Printers Section -->
   <section id="partner1" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold text-black mb-6">Biometrics Partners</h2>
+      <h2 class="text-3xl font-bold text-black mb-6">Printer Partners</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Card 1 -->
       <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition border border-gray-300">
@@ -216,7 +246,6 @@
   </div>
 </section>
 
-
   <!-- HR Management Solutions Section -->
   <section id="partner2" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
     <div class="max-w-7xl mx-auto">
@@ -232,10 +261,79 @@
     </div>
   </section>
 
+  <!-- Back to Top Button (Mobile Only) -->
+  <button id="backToTop" class="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-black shadow-lg hover:bg-blue-700 focus:outline-none md:hidden hidden" aria-label="Back to Top">
+    ↑
+  </button>
+
   <!-- Footer -->
   <footer class="bg-white text-black text-center py-4 font-[itc-eras]">
     <p>&copy; 2025 Saflec Systems. All rights reserved.</p>
   </footer>
 
+   <!-- Mobile Menu Script -->
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton?.addEventListener('click', () => {
+      const isVisible = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', isVisible);
+    });
+
+    const partnerData = [
+      {
+        id: 'biometrics',
+        title: 'Biometrics Partners',
+        bgColor: 'bg-gray-100',
+        cards: [
+          { title: 'Hybrid Cloud', image: 'https://source.unsplash.com/400x200/?cloud,technology', description: 'Seamless integration between on-prem and cloud systems.' },
+          { title: 'Network Security', image: 'https://source.unsplash.com/400x200/?network,security', description: 'Zero-trust frameworks and secure access solutions.' },
+          { title: 'DevOps Automation', image: 'https://source.unsplash.com/400x200/?devops,automation', description: 'CI/CD pipelines and infrastructure as code.' },
+        ]
+      },
+      {
+        id: 'cctv',
+        title: 'CCTV Partners',
+        bgColor: 'bg-white',
+        cards: [
+          { title: 'Surveillance Integration', image: 'https://source.unsplash.com/400x200/?cctv,camera', description: 'Integrated surveillance solutions for enterprise.' },
+          { title: 'Smart Cameras', image: 'https://source.unsplash.com/400x200/?camera,ai', description: 'AI-powered cameras for real-time alerts.' },
+        ]
+      },
+      {
+        id: 'automation',
+        title: 'Automation Partners',
+        bgColor: 'bg-gray-100',
+        cards: [
+          { title: 'Process Automation', image: 'https://source.unsplash.com/400x200/?robot,automation', description: 'Automate repetitive tasks for efficiency.' },
+        ]
+      }
+    ];
+
+    const container = document.getElementById('partners-container');
+    const sectionTemplate = document.getElementById('partner-template');
+    const cardTemplate = document.getElementById('partner-card-template');
+
+    partnerData.forEach(section => {
+      const sectionClone = sectionTemplate.content.cloneNode(true);
+      const sectionElement = sectionClone.querySelector('section');
+      sectionElement.id = section.id;
+      sectionElement.classList.add(section.bgColor);
+      sectionClone.querySelector('.section-title').textContent = section.title;
+      const cardContainer = sectionClone.querySelector('div.grid');
+
+      section.cards.forEach(card => {
+        const cardClone = cardTemplate.content.cloneNode(true);
+        cardClone.querySelector('.partner-img').src = card.image;
+        cardClone.querySelector('.partner-img').alt = card.title;
+        cardClone.querySelector('.partner-title').textContent = card.title;
+        cardClone.querySelector('.partner-description').textContent = card.description;
+        cardContainer.appendChild(cardClone);
+      });
+
+      container.appendChild(sectionClone);
+    });
+  </script>
 </body>
 </html>
