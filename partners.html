@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Partners</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-white shadow p-6 mb-8">
+    <h1 class="text-3xl font-bold text-center">Our Technology Partners</h1>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4">
+    <!-- Section Template -->
+    <script id="section-template" type="text/template">
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">{{CATEGORY}}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {{CARDS}}
+        </div>
+      </section>
+    </script>
+
+    <!-- Card Template -->
+    <script id="card-template" type="text/template">
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <div class="h-40 bg-gray-200 rounded mb-4 flex items-center justify-center">
+          <span class="text-gray-500">Image</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Product Name</h3>
+        <p class="text-sm text-gray-600">Short description of the product.</p>
+      </div>
+    </script>
+
+    <div id="content"></div>
+  </main>
+
+  <script>
+    const categories = [
+      "Biometrics",
+      "CCTV",
+      "Automation",
+      "Printers",
+      "Display Systems",
+      "Point of Sale",
+      "HR Management Solutions"
+    ];
+
+    const sectionTemplate = document.getElementById('section-template').innerHTML;
+    const cardTemplate = document.getElementById('card-template').innerHTML;
+
+    const content = document.getElementById('content');
+
+    categories.forEach(category => {
+      let cardsHTML = "";
+      for (let i = 0; i < 6; i++) {
+        cardsHTML += cardTemplate;
+      }
+      const sectionHTML = sectionTemplate
+        .replace("{{CATEGORY}}", category)
+        .replace("{{CARDS}}", cardsHTML);
+      content.innerHTML += sectionHTML;
+    });
+  </script>
+</body>
+</html>
