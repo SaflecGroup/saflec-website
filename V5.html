@@ -142,17 +142,8 @@
 
     <div class="h-1 w-full bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100"></div>
 
-<!-- Toggle Button (Hamburger Icon) -->
-<button id="menu-toggle" class="md:hidden p-2">
-  <!-- Simple hamburger icon -->
-  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-4 py-4 space-y-2">
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-4 py-4 space-y-2">
   <a href="#home" class="nav-link text-black font-medium">Home</a>
   <a href="#about" class="nav-link text-black font-medium">About Us</a>
   <a href="#products" class="nav-link text-black font-medium">Products</a>
@@ -163,25 +154,7 @@
   <a href="#feedback" class="nav-link text-black font-medium">Feedback</a>
   <a href="#contact" class="nav-link text-black font-medium">Contact Us</a>
   <a href="#installer" class="nav-link text-black font-medium">Installers</a>
-</div>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuLinks = mobileMenu.querySelectorAll('.nav-link');
-
-  // Toggle menu visibility
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Hide menu on link click
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  });
-</script>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -1725,18 +1698,10 @@
       </div> <!-- End of .container -->
     </section> <!-- End of Contact Us Section -->
 
-<!-- Footer (separate from Contact Us) -->
-<footer class="bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100 text-white text-center py-4 font-[itc-eras] relative">
-  <p>&copy; 2025 Saflec Systems. All rights reserved.</p>
-  <a href="#top" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-blue-700 hover:bg-blue-800 px-3 py-1 rounded-md text-sm shadow-lg transition duration-300">
-    ↑ Back to Top
-  </a>
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-</footer>
-	    
+    <!-- Footer (separate from Contact Us) -->
+    <footer class="bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100 text-white text-center py-4 font-[itc-eras]">
+      <p>&copy; 2025 Saflec Systems. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
