@@ -127,6 +127,7 @@
   <a href="#team" class="nav-link text-black font-medium">Team</a>
   <a href="#feedback" class="nav-link text-black font-medium">Feedback</a>
   <a href="#contact" class="nav-link text-black font-medium">Contact Us</a>
+  <a href="#installer" class="nav-link text-black font-medium">Installers</a>
 </nav>
 
 	
@@ -141,8 +142,17 @@
 
     <div class="h-1 w-full bg-gradient-to-r from-blue-500 via-blue-250 to-blue-100"></div>
 
-    <!-- Mobile Nav -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-4 py-4 space-y-2">
+<!-- Toggle Button (Hamburger Icon) -->
+<button id="menu-toggle" class="md:hidden p-2">
+  <!-- Simple hamburger icon -->
+  <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden bg-white shadow-md px-4 py-4 space-y-2">
   <a href="#home" class="nav-link text-black font-medium">Home</a>
   <a href="#about" class="nav-link text-black font-medium">About Us</a>
   <a href="#products" class="nav-link text-black font-medium">Products</a>
@@ -152,7 +162,26 @@
   <a href="#team" class="nav-link text-black font-medium">Team</a>
   <a href="#feedback" class="nav-link text-black font-medium">Feedback</a>
   <a href="#contact" class="nav-link text-black font-medium">Contact Us</a>
-    </div>
+  <a href="#installer" class="nav-link text-black font-medium">Installers</a>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuLinks = mobileMenu.querySelectorAll('.nav-link');
+
+  // Toggle menu visibility
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Hide menu on link click
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
   </header>
 
   <!-- Hero Section -->
